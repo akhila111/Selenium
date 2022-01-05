@@ -1,102 +1,124 @@
 package com.obsqura;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 public class TestDayOfTheWeek
 {
-	
-	public static void main(String args[])
-	{
-		case_0();
-		caseValidData();
-		case_8();
-		caseBigNumber();		
-	}
-
 	/*1.  Test case '0'
 	Expected Result: "Invalid Entry"*/
+	@Test
 	public static void case_0()
 	{
 	int test_data=0;
 	DaysOfTheWeek obj=new DaysOfTheWeek();
 	String actual_result=obj.getDay(test_data);
 	String Expected="Invalid Entry";
-	if(actual_result.equals(Expected))
-	{
-		System.out.println("Test passed");
-	}
-	else
-	{
-		System.out.println("Test Failed");
-
-	}
+	Assert.assertEquals(actual_result,Expected,"Test Failed");
 	}
 	
 	/* 2 to 8 Test case '1' to '7'
 	   Expected Result : "Show corresponding dates"
-	 */
-	public static void caseValidData()
+	   */
+	@Test
+	public static void case_1()
 	{
-	for(int test_data=1;test_data<8;test_data++)
-	{
-
+	int test_data=1;
 	DaysOfTheWeek obj=new DaysOfTheWeek();
 	String actual_result=obj.getDay(test_data);
-	if(actual_result.equals("Sunday")||
-			actual_result.equals("Monday")||
-			actual_result.equals("Tuesday")||
-			actual_result.equals("Wednesday")||
-			actual_result.equals("Thursday")||
-			actual_result.equals("Friday")||
-			actual_result.equals("Saturday"))
+	String Expected="Sunday";
+	Assert.assertEquals(actual_result,Expected,"Test Failed");
+	}
+	
+	@Test
+	public static void case_2()
 	{
-		System.out.println("Test passed");
+	int test_data=2;
+	DaysOfTheWeek obj=new DaysOfTheWeek();
+	String actual_result=obj.getDay(test_data);
+	String Expected="Monday";
+	Assert.assertEquals(actual_result,Expected,"Test Failed");
 	}
-	else
+	
+	@Test
+	public static void case_3()
 	{
-		System.out.println("Test Failed");
-
+	int test_data=3;
+	DaysOfTheWeek obj=new DaysOfTheWeek();
+	String actual_result=obj.getDay(test_data);
+	String Expected="Tuesday";
+	Assert.assertEquals(actual_result,Expected,"Test Failed");
 	}
+	
+	@Test
+	public static void case_4()
+	{
+	int test_data=4;
+	DaysOfTheWeek obj=new DaysOfTheWeek();
+	String actual_result=obj.getDay(test_data);
+	String Expected="Wednesday";
+	Assert.assertEquals(actual_result,Expected,"Test Failed");
 	}
+	
+	@Test
+	public static void case_5()
+	{
+	int test_data=5;
+	DaysOfTheWeek obj=new DaysOfTheWeek();
+	String actual_result=obj.getDay(test_data);
+	String Expected="Thursday";
+	Assert.assertEquals(actual_result,Expected,"Test Failed");
 	}
-	/*
-	 3. Test case '8'
+	
+	@Test
+	public static void case_6()
+	{
+	int test_data=6;
+	DaysOfTheWeek obj=new DaysOfTheWeek();
+	String actual_result=obj.getDay(test_data);
+	String Expected="Friday";
+	Assert.assertEquals(actual_result,Expected,"Test Failed");
+	}
+	
+	@Test
+	public static void case_7()
+	{
+	int test_data=7;
+	DaysOfTheWeek obj=new DaysOfTheWeek();
+	String actual_result=obj.getDay(test_data);
+	String Expected="Saturday";
+	Assert.assertEquals(actual_result,Expected,"Test Failed");
+	}
+	
+	
+	
+	/* 3. Test case '8'
 	 Expected Result "Invalid Entry"
 	 */
+	@Test
 	public static void case_8()
 	{
-		int test_data=8;
-		DaysOfTheWeek obj=new DaysOfTheWeek();
-		String actual_result=obj.getDay(test_data);
-		String Expected="Invalid Entry";
-		if(actual_result.equals(Expected))
-		{
-			System.out.println("Test passed");
-		}
-		else
-		{
-			System.out.println("Test Failed");
-
-		}
+	int test_data=8;
+	DaysOfTheWeek obj=new DaysOfTheWeek();
+	String actual_result=obj.getDay(test_data);
+	String Expected="Invalid Entry";
+	Assert.assertEquals(actual_result,Expected,"Test Failed");
 	}
+	
+	
 	/*
 	 4. Test case '1111111111111111111111111111111111111111111111111111111111'
 	 Expected Result "Invalid Entry"
-	 */
-	
+
+		 */
+	@Test
 	public static void caseBigNumber()
 	{
 		int test_data=11111111;
 		DaysOfTheWeek obj=new DaysOfTheWeek();
 		String actual_result=obj.getDay(test_data);
 		String Expected="Invalid Entry1";
-		if(actual_result.equals(Expected))
-		{
-			System.out.println("Test passed");
-		}
-		else
-		{
-			System.out.println("Test Failed");
-
-		}
+		Assert.assertEquals(actual_result,Expected,"Test Failed");
 	}
 	
 	

@@ -11,7 +11,7 @@ public class DaysOfTheWeek
 	{
 		case 1:
 			day="Sunday";
-			return day ; 
+			return day ;
 		case 2:
 			day="Monday";
 			return day ; 
@@ -32,7 +32,7 @@ public class DaysOfTheWeek
 			return day ; 
 		default:
 			return "Invalid Entry";
-		}
+	}
 	}
 
 }
