@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class SeleniumAssignment_Jan06 
 {
 
-     @Test
+    @Test
     void verifyPageTitle()
     {
  		System.setProperty("webdriver.chrome.driver","C://Users//user//Drivers//chromedriver.exe");
@@ -30,15 +30,19 @@ public class SeleniumAssignment_Jan06
 		driver.manage().window().maximize();
 		driver.get("https://www.obsqurazone.com");
         String pageSource=driver.getPageSource();
-        System.out.println("Page souce :"+pageSource);
-        int counter;
-        for(counter=0;counter<=pageSource.length();)
-        {
-        pageSource.contains("<img src=");
-        counter ++;
-        }
-        System.out.println("Number Of Images in the page : "+counter);
-	    driver.close();
-
+		driver.get("https://toolsqa.com");
+		String words[] = pageSource.split(">"); 
+		int count=0;   
+ 	      for(int i=0;i<words.length;i++)     
+	      {
+	    	  System.out.println("Words"+words[i]);
+	         if(words[i].contains("<img src=")) 
+	            {
+	               count=count+1;    
+	            }
+	      }
+	         System.out.println("No of images : "+count); 
+         
+      driver.close();   
 	}
 }
