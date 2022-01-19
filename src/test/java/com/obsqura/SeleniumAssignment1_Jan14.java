@@ -20,9 +20,9 @@ void openingBrowser()
 {
 	System.setProperty("webdriver.chrome.driver", "C://Users//user//Drivers//chromedriver.exe");
 	driver= new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 	driver.manage().window().maximize();
 	driver.get("http://buffalocart.com/demo/crm/");
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 	WebElement userName_textbox=driver.findElement(By.id("email"));
 	userName_textbox.sendKeys("admin@admin.com");
 	WebElement password_textbox=driver.findElement(By.id("password"));
