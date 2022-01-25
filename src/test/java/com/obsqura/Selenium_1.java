@@ -9,7 +9,7 @@ public class Selenium_1 {
 	@Test
 	void OpeningBrowser()
 	{
-		System.setProperty("webdriver.chrome.driver", "C://Users//user//Drivers//chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C://Users//user//Drivers//chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.obsqurazone.com");

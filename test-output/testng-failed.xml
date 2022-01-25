@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsqura.SeleniumAssignment_Jan06">
+      <class name="com.obsqura.Test1">
         <methods>
-          <include name="countNumberOfImages"/>
+          <include name="verification"/>
         </methods>
-      </class> <!-- com.obsqura.SeleniumAssignment_Jan06 -->
+      </class> <!-- com.obsqura.Test1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
