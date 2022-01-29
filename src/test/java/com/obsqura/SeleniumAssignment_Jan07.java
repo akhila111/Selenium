@@ -16,7 +16,7 @@ public class SeleniumAssignment_Jan07
 	@BeforeMethod
 	void openingBrowser()
 	{
-		System.setProperty("webdriver.chrome.driver", "C://Users//user//Drivers//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C://Users//Akhila//Drivers//chromedriver.exe");
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.obsqurazone.com");

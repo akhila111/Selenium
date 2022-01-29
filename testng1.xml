@@ -10,6 +10,12 @@
       <class name="com.obsqura.TestDayOfTheWeek"/>
       <class name="com.obsqura.Selenium_1"/>
       <class name="com.obsqura.Selenium_2"/>
+      <class name="com.obsqura.SeleniumAssignment1_Jan11"/>
+      <class name="com.obsqura.SeleniumAssignment1_Jan14"/>
+      <class name="com.obsqura.SeleniumAssignment3_Jan11"/>
+      <class name="com.obsqura.Test1"/>
+      <class name="com.obsqura.Test25thJan"/>
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
